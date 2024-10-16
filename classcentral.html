@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Revathi's design portfolio!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="classcentral.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="https://use.typekit.net/ysm4lxp.css">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+             <i class="fas fa-bars" id="btn"></i>
+             <i class="fas fa-times" id="cancel"></i>
+            </label>
+             </label>
+             <a href="index.html"><img src="revathilogo.png" class="logo"></a>
+             <ul class="list">
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="playground.html">Playground</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+           </nav>
+    </head>
+    <body>
+
+        <div class="cursor outer"></div>
+        <div class="cursor inner"></div>
+        
+        <script>
+          const outerCursor = document.querySelector(".outer");
+          const innerCursor = document.querySelector(".inner");
+          const links = document.querySelectorAll(".link");
+          
+          let mouseX = 0;
+          let mouseY = 0;
+          let innerX = 0;
+          let innerY = 0;
+          
+          window.addEventListener("mousemove", (e) => {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+          
+            outerCursor.style.left = `${mouseX}px`;
+            outerCursor.style.top = `${mouseY}px`;
+          });
+          
+          // Use requestAnimationFrame for smooth inner cursor movement with lag
+          function animate() {
+            innerX += (mouseX - innerX) * 0.1;  // 0.1 controls the smoothness and delay
+            innerY += (mouseY - innerY) * 0.1;
+          
+            innerCursor.style.left = `${innerX}px`;
+            innerCursor.style.top = `${innerY}px`;
+          
+            requestAnimationFrame(animate);
+          }
+          
+          animate();
+          
+          // Add hover effect for links
+          links.forEach(link => {
+            link.addEventListener("mouseenter", () => {
+              outerCursor.classList.add("hover");
+              innerCursor.classList.add("hover");
+            });
+          
+            link.addEventListener("mouseleave", () => {
+              outerCursor.classList.remove("hover");
+              innerCursor.classList.remove("hover");
+            });
+          });
+          </script>
+          <script>
+            const cursor = document.querySelector('.cursor');
+            const inner = document.querySelector('.inner');
+          
+            document.addEventListener('mousemove', (e) => {
+              cursor.style.left = `${e.pageX}px`;
+              cursor.style.top = `${e.pageY}px`;
+            });
+          
+            document.querySelectorAll('a, button').forEach(el => {
+              el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                inner.classList.add('hover');
+              });
+              el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                inner.classList.remove('hover');
+              });
+            });
+          </script>
+        
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="btn">Case Study</div>
+                <h1>Class Central Redesign</h1>
+            </div>
+        </section>
+
+        <section class="info-sec">
+            <div class="info">
+                <div class="role">
+                    <div class="sub">role</div>
+                    <div class="ans">ux designer</div>
+                </div>
+                <div class="tools">
+                    <div class="sub">tools</div>
+                    <div class="ans">figma</div>
+                </div>
+                <div class="team">
+                    <div class="sub">team</div>
+                    <div class="ans">4 designers</div>
+                </div>
+                <div class="duration">
+                    <div class="sub">duration</div>
+                    <div class="ans">1.5 months</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="content">
+        <h3 class="content-heading">Project Description</h3>
+        <div class="content-para">The goal was to optimize Class Central's user experience by analyzing user behavior and platform interactions to identify areas for improvement and implement data-driven solutions.</div>
+        <div class="content-flex">
+            <div class="content-flex-left">Website Background</div>
+            <div class="content-flex-right">Class Central is a leading platform revolutionizing the landscape of online learning. It serves as a one-stop destination for learners worldwide, offering a vast array of online courses from top universities and institutions across the globe.</div>
+        </div>
+        <div class="content-flex">
+            <div class="content-flex-left">Scope</div>
+            <div class="content-flex-right">Evaluate Class Central's user experience by conducting usability tests and analyzing user behavior to optimize platform navigation, search functionality, and review system effectiveness.</div>
+        </div>
+        </section>
+
+        <section class="content">
+            <h3 class="content-heading">Methodology</h3>
+            <div class="content-para">This category details the step-by-step approach taken during the project, including  Planning, testing, analysis and design phases.</div>
+            <div class="content-flex">
+                <div class="content-flex-left">Pre-Test Preparation</div>
+                <div class="content-flex-right">Participant Recruitment, Test Scope Definition, Test Scenario Creation, Questionnaire DesignTest Plan Creation</div>
+            </div>
+            <div class="content-flex">
+                <div class="content-flex-left">Usability Testing</div>
+                <div class="content-flex-right">Test Moderation, Data Collection</div>
+            </div>
+            <div class="content-flex">
+                <div class="content-flex-left">Data Analysis</div>
+                <div class="content-flex-right">Data Transcription, Quantitative Analysis, Qualitative analysis</div>
+            </div>
+            <div class="content-flex">
+                <div class="content-flex-left">Reporting and Re-Designing</div>
+                <div class="content-flex-right">Test Report, Recommendations for Improvement</div>
+            </div>
+            </section>
+
+            <section id="zoom-section"></section>
+            <script>
+               const zoomSection = document.getElementById('zoom-section');
+let lastScrollPosition = 0; // Keep track of the last scroll position
+let isScrolling = false; // Flag to prevent multiple scroll events
+
+window.addEventListener('scroll', () => {
+    // Update the scroll position and set the flag
+    lastScrollPosition = window.scrollY;
+    if (!isScrolling) {
+        isScrolling = true;
+        requestAnimationFrame(() => {
+            // Get the scroll position as a percentage of the viewport height
+            let scrollPosition = lastScrollPosition / window.innerHeight;
+
+            // Calculate the new background size (100% means no zoom, increasing it zooms the image)
+            let newSize = 100 + scrollPosition * 20; // Adjust the multiplier to control zoom speed
+            
+            // Apply the new background size
+            zoomSection.style.backgroundSize = `${newSize}%`;
+
+            // Reset the flag
+            isScrolling = false;
+        });
+    }
+});
+              </script>
+              
+              <section class="content">
+                <h3 class="content-heading">Participant Background</h3>
+                <div class="content-para">Conducted usability testing with eight student participants using eleven task scenarios.</div>
+                <div class="content-flex">
+                    <div class="content-flex-left">Learning Format Preference</div>
+                    <div class="content-flex-right">Online Courses: 90%<br>Offline Courses (e.g., workshops, seminars): 10%</div>
+                </div>
+                <div class="content-flex">
+                    <div class="content-flex-left">Frequency of Website Visits</div>
+                    <div class="content-flex-right">Visited the website 2-3 times per week: 60%<br>Visited  the website less than once a week:15%<br>
+                        Visited the  website once a week: 25%</div>
+                </div>
+                <div class="content-flex">
+                    <div class="content-flex-left">Interests</div>
+                    <div class="content-flex-right">Technology: 35%<br>Business & Management: 20%<br>Arts & Humanities: 15%<br>Science & Engineering: 20%<br>Health & Medicine: 10%</div>
+                </div>
+                </section>
+
+                <section class="content">
+                    <h3 class="content-heading">Key Findings</h3>
+                    <div class="content-flex">
+                        <div class="content-flex-left">Interest Selection</div>
+                        <div class="content-flex-right">The selection process presents a large number of options, lacking search functionality and potentially leading to errors.</div>
+                    </div>
+                    <div class="content-flex">
+                        <div class="content-flex-left">Course Management</div>
+                        <div class="content-flex-right">Enrolled courses lack detailed information, and the save button's purpose and location are unclear.</div>
+                    </div>
+                    <div class="content-flex">
+                        <div class="content-flex-left">Learning Materials</div>
+                        <div class="content-flex-right">Descriptions of learning materials lack clarity, and external links require smoother integration.</div>
+                    </div>
+                    <div class="content-flex">
+                        <div class="content-flex-left">Course Filtering</div>
+                        <div class="content-flex-right">Concealed course ratings hinder informed decision-making, while distracting advertisements detract from learning.</div>
+                    </div>
+                    <div class="content-flex">
+                        <div class="content-flex-left">Payment & Fees</div>
+                        <div class="content-flex-right">Hidden costs and an opaque payment process can create user frustration.</div>
+                    </div>
+                    </section>
+
+                    <section class="content">
+                        <h3 class="content-heading">Final Designs</h3>
+                        </section>
+
+                    <div class="ccimages">
+                        <img src="cc1.png">
+                        <img src="cc2.png">
+                        <img src="cc3.png">
+                        <img src="cc4.png">
+                    </div>
+                        
+                        <section class="content">
+                            <h3 class="content-heading">Meet the team!</h3>
+                            <div class="content-flex">
+                                <div class="content-flex-left">Revathi Rajesh (Me!)</div>
+                                <div class="content-flex-right">Usability Test moderator, Data analyser, Researcher, UI Designer</div>
+                            </div>
+                            <div class="content-flex">
+                                <div class="content-flex-left">Shreya Shenoy</div>
+                                <div class="content-flex-right">Usability Test moderator, Data analyser, Researcher, UI Designer</div>
+                            </div>
+                            <div class="content-flex">
+                                <div class="content-flex-left">Shreya Kashikar</div>
+                                <div class="content-flex-right">Usability Test moderator, Data analyser, Researcher, UI Designer</div>
+                            </div>
+                            <div class="content-flex">
+                                <div class="content-flex-left">Parth B</div>
+                                <div class="content-flex-right">Usability Test moderator, Data analyser, Researcher, UI Designer</div>
+                            </div>
+                            </section>
+
+                    <section class="redirect">
+                        <div class="redirect-heading"><h3>why not dive into another project?</h3></div>
+                        <div class="gallery">
+                            <ul class="galleryul">
+                             <li>
+                               <a href="sahaya.html">
+                                 <figure>
+                                   <img src="sahayaredirect.svg" class="imgbox">
+                                   <figcaption>Sahaya Sarige</figcaption>
+                                 </figure>
+                               </a>
+                             </li>
+                             <li>
+                               <a href="izmenyat.html">
+                                 <figure>
+                                   <img src="izmenyatredirect.svg" class="imgbox">
+                                   <figcaption>Izmenyat</figcaption>
+                                 </figure>
+                               </a>
+                             </li>
+                             <li>
+                               <a href="motherclucker.html">
+                                 <figure>
+                                   <img src="chickenredirect.svg" class="imgbox">
+                                   <figcaption>Mother Clucker</figcaption>
+                                 </figure>
+                               </a>
+                             </li>
+                           </ul>
+                         </div>
+                    </section>
+
+       <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/revathi-rajesh-169738273/" target="_blank"><svg class="footersvg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M27 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V27C3 27.5304 3.21071 28.0391 3.58579 28.4142C3.96086 28.7893 4.46957 29 5 29H27C27.5304 29 28.0391 28.7893 28.4142 28.4142C28.7893 28.0391 29 27.5304 29 27V5C29 4.46957 28.7893 3.96086 28.4142 3.58579C28.0391 3.21071 27.5304 3 27 3ZM12 22C12 22.2652 11.8946 22.5196 11.7071 22.7071C11.5196 22.8946 11.2652 23 11 23C10.7348 23 10.4804 22.8946 10.2929 22.7071C10.1054 22.5196 10 22.2652 10 22V14C10 13.7348 10.1054 13.4804 10.2929 13.2929C10.4804 13.1054 10.7348 13 11 13C11.2652 13 11.5196 13.1054 11.7071 13.2929C11.8946 13.4804 12 13.7348 12 14V22ZM11 12C10.7033 12 10.4133 11.912 10.1666 11.7472C9.91997 11.5824 9.72771 11.3481 9.61418 11.074C9.50065 10.7999 9.47094 10.4983 9.52882 10.2074C9.5867 9.91639 9.72956 9.64912 9.93934 9.43934C10.1491 9.22956 10.4164 9.0867 10.7074 9.02882C10.9983 8.97094 11.2999 9.00065 11.574 9.11418C11.8481 9.22771 12.0824 9.41997 12.2472 9.66665C12.412 9.91332 12.5 10.2033 12.5 10.5C12.5 10.8978 12.342 11.2794 12.0607 11.5607C11.7794 11.842 11.3978 12 11 12ZM23 22C23 22.2652 22.8946 22.5196 22.7071 22.7071C22.5196 22.8946 22.2652 23 22 23C21.7348 23 21.4804 22.8946 21.2929 22.7071C21.1054 22.5196 21 22.2652 21 22V17.5C21 16.837 20.7366 16.2011 20.2678 15.7322C19.7989 15.2634 19.163 15 18.5 15C17.837 15 17.2011 15.2634 16.7322 15.7322C16.2634 16.2011 16 16.837 16 17.5V22C16 22.2652 15.8946 22.5196 15.7071 22.7071C15.5196 22.8946 15.2652 23 15 23C14.7348 23 14.4804 22.8946 14.2929 22.7071C14.1054 22.5196 14 22.2652 14 22V14C14.0012 13.7551 14.0923 13.5191 14.256 13.3369C14.4197 13.1546 14.6446 13.0388 14.888 13.0114C15.1314 12.9839 15.3764 13.0468 15.5765 13.188C15.7767 13.3292 15.918 13.539 15.9738 13.7775C16.6502 13.3186 17.4389 13.0526 18.2552 13.0081C19.0714 12.9637 19.8844 13.1424 20.6067 13.5251C21.329 13.9078 21.9335 14.48 22.3551 15.1803C22.7768 15.8806 22.9997 16.6825 23 17.5V22Z" fill="#807E7A"/>
+              </svg></a>
+              <a href="https://www.behance.net/revaarajesh" target="blank"><svg class="footersvg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M11.5 15H8V12H11.5C11.8978 12 12.2794 12.158 12.5607 12.4393C12.842 12.7206 13 13.1022 13 13.5C13 13.8978 12.842 14.2794 12.5607 14.5607C12.2794 14.842 11.8978 15 11.5 15ZM12 17H8V21H12C12.5304 21 13.0391 20.7893 13.4142 20.4142C13.7893 20.0391 14 19.5304 14 19C14 18.4696 13.7893 17.9609 13.4142 17.5858C13.0391 17.2107 12.5304 17 12 17ZM22 15C21.3798 15.0002 20.7749 15.1926 20.2685 15.5508C19.7621 15.9089 19.3792 16.4152 19.1725 17H24.8275C24.6208 16.4152 24.2379 15.9089 23.7315 15.5508C23.2251 15.1926 22.6202 15.0002 22 15ZM30 7V25C30 25.5304 29.7893 26.0391 29.4142 26.4142C29.0391 26.7893 28.5304 27 28 27H4C3.46957 27 2.96086 26.7893 2.58579 26.4142C2.21071 26.0391 2 25.5304 2 25V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H28C28.5304 5 29.0391 5.21071 29.4142 5.58579C29.7893 5.96086 30 6.46957 30 7ZM18 11C18 11.2652 18.1054 11.5196 18.2929 11.7071C18.4804 11.8946 18.7348 12 19 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H19C18.7348 10 18.4804 10.1054 18.2929 10.2929C18.1054 10.4804 18 10.7348 18 11ZM16 19C15.9997 18.3449 15.8385 17.6998 15.5305 17.1216C15.2225 16.5433 14.7772 16.0496 14.2338 15.6838C14.6448 15.1689 14.9022 14.5484 14.9764 13.8937C15.0505 13.239 14.9383 12.5767 14.6527 11.9829C14.3671 11.3892 13.9197 10.8881 13.362 10.5373C12.8043 10.1865 12.1589 10.0003 11.5 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11V22C6 22.2652 6.10536 22.5196 6.29289 22.7071C6.48043 22.8946 6.73478 23 7 23H12C13.0609 23 14.0783 22.5786 14.8284 21.8284C15.5786 21.0783 16 20.0609 16 19ZM27 18C26.9999 16.8567 26.608 15.7479 25.8896 14.8585C25.1712 13.969 24.1696 13.3527 23.0519 13.1122C21.9341 12.8716 20.7677 13.0215 19.747 13.5367C18.7263 14.0518 17.913 14.9013 17.4427 15.9434C16.9723 16.9855 16.8733 18.1573 17.1622 19.2636C17.4511 20.3698 18.1104 21.3437 19.0302 22.0228C19.95 22.7018 21.0748 23.0452 22.217 22.9956C23.3593 22.9459 24.4501 22.5063 25.3075 21.75C25.5064 21.5745 25.6274 21.3271 25.644 21.0623C25.6605 20.7975 25.5712 20.537 25.3956 20.3381C25.3087 20.2396 25.2032 20.1592 25.0852 20.1015C24.9673 20.0438 24.839 20.0098 24.7079 20.0017C24.4432 19.9851 24.1827 20.0745 23.9837 20.25C23.6156 20.5743 23.1735 20.8034 22.6962 20.9172C22.219 21.031 21.7211 21.026 21.2462 20.9026C20.7713 20.7792 20.3339 20.5413 19.9724 20.2095C19.6109 19.8778 19.3362 19.4625 19.1725 19H26C26.2652 19 26.5196 18.8946 26.7071 18.7071C26.8946 18.5196 27 18.2652 27 18Z" fill="#807E7A"/>
+              </svg></a>
+        </div>
+        <div class="footer-text">
+            <p>designed and developed with love by Revathi</p>
+        </div>
+       </footer>
+
+    </div>
+    </body>
+</html>

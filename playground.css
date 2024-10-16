@@ -1,0 +1,440 @@
+
+.maindiv{
+    width: 100%;
+  }
+  
+  @keyframes appear{
+    from{
+      opacity: 0;
+      scale: 0.5;
+    }
+  
+    to{opacity: 1;
+      scale: 1;
+    }
+  }
+  
+  html, body {
+    cursor: none; /* Hide the default cursor globally */
+  }
+
+  *{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: none;
+  }
+  
+  nav{
+    height: 120px;
+    background-color: #FFFCF4;
+    align-items: center;
+    right: 12%;
+  }
+  
+  body{
+      background-color: #FFFCF4; 
+      cursor: none;
+  }
+  
+  nav ul{
+    float: right;
+    font-family: "Afacad Flux", sans-serif;
+    margin-right: 12%;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+    
+    
+  }
+  
+  nav ul li a{
+    position: relative;
+    color: #011ECB;
+    font-size: 24px;
+    top: 24px;
+  }
+  
+  nav ul li a::before{
+    position: absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height: 3px;
+    width: 100%;
+    background: #011ECB;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+    top: 40px;
+  }
+  
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  label #btn,
+  label #cancel{
+  color: #011ECB;
+  font-size: 40px;
+  float:right;
+  line-height: 80px;
+  margin-top: 16px;
+  
+  cursor: pointer;
+  display: none;
+  
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  @media (max-width: 944px){
+    .logo{
+      left: 12%;
+      top: 40px;
+      width: 130px;
+      cursor: pointer;
+    }
+    nav ul li a{
+      font-size: 32px;
+    }
+  
+    nav{
+      padding-right: 12%;
+    }
+  }
+  
+  @media (max-width: 944px){
+    label #btn{
+      display: block;
+      top: 40px;
+     
+    }
+  
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #FFFCF4;
+      top: 80px;
+      left: -100%;
+      transition: all .5s;
+      text-align: center;
+  
+    }
+  
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+      
+      
+    }
+  
+    nav ul li a{
+      font-size: 32px;
+    }
+  
+    #check:checked~ul{
+      left: 0;
+  
+    }
+  
+    #check:checked~ label #btn{
+      display: none;
+      top: 40px;
+    }
+  
+    #check:checked~ label #cancel{
+      display: block;
+      top: 40px;
+    }
+  
+    footer{
+      padding: 16%;
+    }
+  
+  }
+  
+  
+  
+  .logo{
+  top: 40px;
+  width: 40px;
+  height: 37.239px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 12%;
+  cursor: pointer;
+  }
+  
+  
+  
+  footer{
+  font-family: "Afacad Flux", sans-serif;
+  color: #807E7A;
+  width: 100%;
+  background-color: #FFFCF4;
+  text-align: center;
+  bottom: 0;
+  padding: 6%;
+  margin-top: 12%;
+  }
+  
+  
+  svg {
+    width: 32px;
+    height: 32px;
+    transition: fill 3s ease; /* Smooth transition effect */
+  }
+  
+  /* Change SVG color on hover */
+  svg:hover path {
+    fill: #011ECB; /* Change to the desired hover color */
+  }
+
+
+.playground{
+    text-align: left;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 8%;
+    margin-bottom: 50px;
+    font-family:"neulis-cursive", sans-serif;
+    color: #011ECB;
+    text-align: center;
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 400;
+    }
+    @media (max-width: 944px){
+      .playground{
+        margin-left: 9%;
+        margin-bottom: 3px;
+        margin-top: 8%;
+        font-size: 60px;
+        text-align: left;
+      }
+    
+    }
+    
+    @media (max-width: 480px){
+      .playground{
+        margin-left: 9%;
+        margin-top: 8%;
+        margin-right: 8%;
+        font-size: 40px;
+        padding-left: 0px;
+        margin-bottom: 3px;
+        text-align: left;
+      }
+    
+    }
+    
+    .playpara{
+      margin-left: 8%;
+      margin-right: 8%;
+      color: #011ECB;
+      font-family: "Afacad Flux", sans-serif;
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 400;
+      padding-left: 45%;
+      padding-right: 8%;
+    
+    }
+    
+    @media (max-width: 944px){
+      .playpara{
+        font-size: 24px;
+        padding-left: 5px;
+        width: auto;
+      }
+    }
+    
+    @media (max-width: 480px){
+      .playpara{
+        font-size: 16px;
+        padding-left: 5px;
+        width: auto;
+      }
+    }
+
+
+.gallery {
+  font-family: "Afacad Flux", sans-serif;
+  margin: 0;
+  padding: 5%; /* Reduced padding for better centering */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgbox {    
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 1000ms;
+  border-radius: 25px;
+}
+
+.galleryul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr); /* Four columns on larger screens */
+  max-width: 100%;
+  width: 100%; /* Make width responsive */
+}
+
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 300ms;
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms, transform 600ms;
+}
+
+a {
+  cursor: none;
+}
+
+a:is(:hover, :focus) figure::after {
+  opacity: 1;
+}
+
+a:is(:hover, :focus) figcaption {
+  opacity: 1;
+  transition: opacity 600ms;
+}
+
+/* Media query for medium screens (max-width: 944px) */
+@media (max-width: 944px) {
+  .gallery {
+    padding: 2%;
+  }
+
+  .galleryul {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for screens below 944px */
+  }
+}
+
+/* Media query for small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .gallery {
+    padding: 1%;
+  }
+
+  .galleryul {
+    grid-template-columns: 1fr; /* Single column for screens below 480px */
+  }
+
+  figcaption {
+    font-size: 1rem; /* Adjusted font size for small screens */
+    padding: 0.5rem; /* Adjusted padding for small screens */
+  }
+}
+
+/* Prefers-reduced-motion support */
+@media (prefers-reduced-motion: no-preference) {
+  figcaption {
+    transform: translate3d(0, 2rem, 0);
+  }
+
+  figure::after {
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 900ms;
+  }
+
+  a:is(:hover, :focus) figure::after {
+    transform: scale(2.5);
+  }
+
+  a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 600ms 400ms, transform 600ms 400ms;
+  }
+
+  a:is(:hover, :focus) img {
+    transform: scale(1.2);
+  }
+}
+
+.cursor {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.outer {
+  transition: transform 250ms ease-in-out; /* Smooth scaling transition */
+  height: 15px;
+  width: 15px;
+  background: #011ECB;
+}
+
+.inner {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #011ECB;
+  opacity: 70%;
+  transition: background 250ms ease-out, transform 250ms ease-in-out;
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(2); 
+  transition: transform 250ms ease-in-out;
+}
+
+.inner.hover {
+  background: #011ECB;
+}

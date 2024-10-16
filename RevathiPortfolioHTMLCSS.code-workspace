@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../RevathiPortfolioHTMLCSS"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "RevathiPortfolioHTMLCSS"
+	}
+}

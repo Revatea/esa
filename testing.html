@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <main>
+        <style>
+        .container{
+         width: 90%;
+         margin: 0 auto;
+         padding: 12%;
+        }
+
+        :root{
+          --cards: 4;
+          --cardHeight: 50%;
+          --cardTopPadding: 1.5em;
+          --cardMargin: 4vw;
+        }
+
+        #cards{
+          list-style: none;
+          padding-left: 0;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(var(--cards)),var(--cardHeight);
+          gap: var(--cardMargin);
+          padding-bottom: calc(var(--cards)* var(--cardTopPadding));
+          margin-bottom: var(--cardMargin);
+        }
+
+        #card1{
+          --index: 1;
+        }
+
+        #card2{
+          --index: 2;
+        }
+
+        #card3{
+          --index: 3;
+        }
+
+        #card4{
+          --index: 4;
+        }
+
+        .card{
+          position: sticky;
+          top: 0;
+          padding-top: calc(var(--index) * var(--cardTopPadding));
+        }
+
+        #card1 .card-body{
+          background-color: #FFFCF4;
+
+        }
+
+        #card2 .card-body{
+          background-color: #FFFCF4;
+          
+        }
+
+        #card3 .card-body{
+          background-color: #FFFCF4;
+          
+        }
+
+        #card4 .card-body{
+          background-color: #FFFCF4;
+        }
+
+        .card-body{
+          box-sizing: border-box;
+          padding: 8%;
+          border-radius: 10%;
+          flex-direction: row;
+        }
+
+        </style>
+
+    </main>
+    <body>
+      <div class="container">
+        <ul id="cards">
+          <li class="card" id="card1">
+            <div class="card-body">
+              <div class="card-left">
+                <h2 class="classcentral">Class Central Redesign</h2>
+                <ul class="tags">
+                    <li class="tag">Case Study</li>
+                    <li class="tag">UX Design</li>
+                    <li class="tag">UI Design</li>
+                </ul>
+
+                <hr width="100%" size="2" color="blue">
+            
+                <p class="cardpara">
+                    Optimized Class Central's user experience by analyzing user behavior and platform interactions, identifying improvement areas, and implementing data-driven solutions.
+                </p>
+
+                
+
+                <button class="view-project-button">
+                    View Project
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M14.0967 11.8013L28.3001 11.8011M28.3001 11.8011L28.3001 25.8025M28.3001 11.8011L11.8009 28.3003" stroke="#FFFCF4" stroke-width="2.18182" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                </button>
+              </div>
+              <div class="card-right">
+                <img src="classcentralimg.png">
+              </div>
+
+            </div>
+          </li>
+          <li class="card" id="card2">
+            <div class="card-body">
+              <div class="card-left">
+                <h2 class="classcentral">Class Central Redesign</h2>
+                <ul class="tags">
+                    <li class="tag">Case Study</li>
+                    <li class="tag">UX Design</li>
+                    <li class="tag">UI Design</li>
+                </ul>
+
+                <hr width="100%" size="2" color="blue">
+            
+                <p class="cardpara">
+                    Optimized Class Central's user experience by analyzing user behavior and platform interactions, identifying improvement areas, and implementing data-driven solutions.
+                </p>
+
+                
+
+                <button class="view-project-button">
+                    View Project
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M14.0967 11.8013L28.3001 11.8011M28.3001 11.8011L28.3001 25.8025M28.3001 11.8011L11.8009 28.3003" stroke="#FFFCF4" stroke-width="2.18182" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                </button>
+              </div>
+              <div class="card-right">
+                <img src="sahaya.png">
+              </div>
+
+            </div>
+          </li>
+          <li class="card" id="card3">
+            <div class="card-body">
+              <div class="card-left">
+                <h2 class="classcentral">Class Central Redesign</h2>
+                <ul class="tags">
+                    <li class="tag">Case Study</li>
+                    <li class="tag">UX Design</li>
+                    <li class="tag">UI Design</li>
+                </ul>
+
+                <hr width="100%" size="2" color="blue">
+            
+                <p class="cardpara">
+                    Optimized Class Central's user experience by analyzing user behavior and platform interactions, identifying improvement areas, and implementing data-driven solutions.
+                </p>
+
+                
+
+                <button class="view-project-button">
+                    View Project
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M14.0967 11.8013L28.3001 11.8011M28.3001 11.8011L28.3001 25.8025M28.3001 11.8011L11.8009 28.3003" stroke="#FFFCF4" stroke-width="2.18182" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                </button>
+              </div>
+              <div class="card-right">
+                <img src="izmenyat.png">
+              </div>
+
+            </div>
+          </li>
+          <li class="card" id="card4">
+            <div class="card-body">
+              <div class="card-left">
+                <h2 class="classcentral">Class Central Redesign</h2>
+                <ul class="tags">
+                    <li class="tag">Case Study</li>
+                    <li class="tag">UX Design</li>
+                    <li class="tag">UI Design</li>
+                </ul>
+
+                <hr width="100%" size="2" color="blue">
+            
+                <p class="cardpara">
+                    Optimized Class Central's user experience by analyzing user behavior and platform interactions, identifying improvement areas, and implementing data-driven solutions.
+                </p>
+
+                
+
+                <button class="view-project-button">
+                    View Project
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M14.0967 11.8013L28.3001 11.8011M28.3001 11.8011L28.3001 25.8025M28.3001 11.8011L11.8009 28.3003" stroke="#FFFCF4" stroke-width="2.18182" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                </button>
+              </div>
+              <div class="card-right">
+                <img src="chicken.png">
+              </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+    </body>
+</html>

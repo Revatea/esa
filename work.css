@@ -1,0 +1,598 @@
+
+.maindiv{
+  width: 100%;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to{opacity: 1;
+    scale: 1;
+  }
+}
+
+html, body {
+  cursor: none; /* Hide the default cursor globally */
+}
+
+*{
+  margin: 0;
+  padding:0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+nav{
+  height: 120px;
+  background-color: #FFFCF4;
+  align-items: center;
+  right: 12%;
+}
+
+body{
+    background-color: #FFFCF4; 
+}
+
+nav ul{
+  float: right;
+  font-family: "Afacad Flux", sans-serif;
+  margin-right: 12%;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+  
+  
+}
+
+nav ul li a{
+  position: relative;
+  color: #011ECB;
+  font-size: 24px;
+  top: 24px;
+}
+
+nav ul li a::before{
+  position: absolute;
+  content:'';
+  left:0;
+  bottom:0;
+  height: 3px;
+  width: 100%;
+  background: #011ECB;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+  top: 40px;
+}
+
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+label #btn,
+label #cancel{
+color: #011ECB;
+font-size: 40px;
+float:right;
+line-height: 80px;
+margin-top: 16px;
+
+cursor: pointer;
+display: none;
+
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width: 944px){
+  .logo{
+    left: 12%;
+    top: 40px;
+    width: 130px;
+    cursor: pointer;
+  }
+  nav ul li a{
+    font-size: 32px;
+  }
+
+  nav{
+    padding-right: 12%;
+  }
+}
+
+@media (max-width: 944px){
+  label #btn{
+    display: block;
+    top: 40px;
+   
+  }
+
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #FFFCF4;
+    top: 80px;
+    left: -100%;
+    transition: all .5s;
+    text-align: center;
+
+  }
+
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    
+    
+  }
+
+  nav ul li a{
+    font-size: 32px;
+  }
+
+  #check:checked~ul{
+    left: 0;
+
+  }
+
+  #check:checked~ label #btn{
+    display: none;
+    top: 40px;
+  }
+
+  #check:checked~ label #cancel{
+    display: block;
+    top: 40px;
+  }
+
+  footer{
+    padding: 16%;
+  }
+
+}
+
+.footersvg {
+  width: 32px;
+  height: 32px;
+  transition: fill 3s ease; /* Smooth transition effect */
+}
+
+/* Change SVG color on hover */
+.footersvg:hover path {
+  fill: #011ECB; /* Change to the desired hover color */
+}
+
+.logo{
+top: 40px;
+width: 40px;
+height: 37.239px;
+flex-shrink: 0;
+position: absolute;
+left: 12%;
+cursor: pointer;
+}
+
+
+
+footer{
+font-family: "Afacad Flux", sans-serif;
+color: #807E7A;
+width: 100%;
+background-color: #FFFCF4;
+text-align: center;
+bottom: 0;
+padding: 6%;
+margin-top: 20%;
+}
+
+
+svg {
+  width: 32px;
+  height: 32px;
+  transition: fill 3s ease; /* Smooth transition effect */
+}
+
+/* Change SVG color on hover */
+svg:hover path {
+  fill: #011ECB; /* Change to the desired hover color */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 12%;
+  padding-left: 12%;
+  padding-top: 5%;
+  height: 20%;
+  box-sizing: border-box;
+  background-color: #FFFCF4;
+  font-family:"neulis-cursive", sans-serif;
+
+}
+
+/* Text section styling */
+.hero-text {
+  flex: 1;
+  padding-right: 10px;
+  font-family:"neulis-cursive", sans-serif;
+}
+
+/* Heading */
+h3 {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Styling for "Hi I'm" */
+.intro {
+  font-size: 72px; /* Smaller font size for "Hi I'm" */
+  padding-left: 90px; /* Greater left padding for "Hi I'm" */
+  font-weight: 100;
+  color: #011ECB;
+  font-family:"neulis-cursive", sans-serif;
+}
+
+/* Styling for "Revathi" */
+.first-name {
+  font-size: 128px; /* Larger font size for "Revathi" */
+  padding-left: 0; /* More left padding for "Revathi" */
+  color: #011ECB;
+  font-family:"neulis-cursive", sans-serif;
+  line-height: 0.5;
+
+}
+
+/* Styling for "Rajesh" */
+.last-name {
+  font-size: 128px; /* Same font size as "Revathi" */
+  padding-left: 100px; /* Even greater left padding for "Rajesh" */
+  color: #011ECB;
+  font-family:"neulis-cursive", sans-serif;
+}
+
+
+
+/* Paragraph */
+.hero p {
+color: #011ECB;
+text-align: right;
+font-family: "Afacad Flux", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+letter-spacing: -0.456px;
+}
+
+
+.hero-image {
+  flex: 1;
+  float: right;
+  transform: scale(1.2);
+ padding-left: 150px;
+
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+/* Responsive styles */
+@media (max-width: 944px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+  }
+
+  .hero-text {
+      padding-right: 0;
+  }
+
+  .hero-image {
+      margin-top: 20px;
+      text-align: center;
+      padding-left: 0;
+      transform: scale(1);
+  }
+
+  .intro{
+    font-size: 60px;
+    padding-left: 10%;
+  }
+
+  .first-name{
+    font-size: 100px;
+    line-height: 0.8;
+    font-weight: 300;
+  }
+
+  .last-name{
+    font-size: 100px;
+    padding-left: 15%;
+    font-weight: 300;
+  }
+
+
+  .hero p {
+      font-size: 1.1rem;
+      text-align: right;
+  }
+
+  .subheading{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .intro{
+    font-size: 42.078px;
+    padding-left: 10%;
+  }
+
+  .first-name{
+    font-size: 74.805px;
+    line-height: 0.8;
+  }
+
+  .last-name{
+    font-size: 74.805px;
+    padding-left: 15%;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .hero-btn {
+      padding: 12px 25px;
+  }
+
+  .hero{
+    gap: 40px;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 0;
+}
+.subheading{
+  font-size:10px;
+}
+}
+
+.subheading{
+  margin-left: 12%;
+  width: 70%;
+  margin-top: 12%;
+  margin-bottom: 8%;
+  margin-right: 12%;
+  color: #011ECB;
+  font-family: "Afacad Flux", sans-serif;
+  color: #011ECB;
+  text-align: left;
+  font-family: "Afacad Flux";
+  font-size: 48px;
+  padding-bottom: 0;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+:root{
+  --cards: 4;
+  --cardHeight: 90vh;
+  --cardTopPadding: 1.5em;
+  --cardMargin: 4vw;
+}
+
+.container {
+  border: #011ECB;
+  width: 100%;
+  padding-left: 12%;
+  padding-right: 12%;
+  align-items: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+#cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), calc(var(--cardHeight)));
+  gap: var(--cardMargin);
+  margin-bottom: var(--cardMargin);
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+.card-body {
+    background-color: #FFFCF4;
+  margin-top: 0;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 5vh;
+  color: #011ECB;
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 8%;
+  border-radius: 65px;
+  border: 3px solid #011ECB;
+  width: 100%;
+  height: var(--cardHeight);
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+}
+
+.tags {
+  display: flex;
+  padding: 3px;
+  font-size: 24px;
+  float: left;
+}
+
+.tag {
+  margin: 16px 4px;
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 29px;
+  border: 1px solid #011ECB;
+  background: #FFFCF4;
+  color: #011ECB;
+  font-size: 24px;
+  line-height: 2;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.cardpara {
+  color: #011ECB;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+  margin-top: 8%;
+}
+
+.view-project-button {
+  display: inline-flex;
+  padding: 20px 40px;
+  align-items: center;
+  border-radius: 90px;
+  font-size: 24px;
+  background: #011ECB;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 56px;
+}
+
+.view-project-button:hover {
+  background-color: #01127A;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  fill: white;
+}
+
+
+@media (max-width: 944px) {
+
+  .container{
+    margin: auto;
+    padding: 8%;
+  }
+
+  :root{
+    --cards: 4;
+    --cardHeight: 90%;
+    --cardTopPadding: 1.5em;
+    --cardMargin: 4vw;
+  }
+
+  #cards{
+    margin: auto;
+  }
+
+  .card-body{
+    padding: 8%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardleft{
+    transform: scale(0.5);
+  }
+
+  .cardright{
+    transform: scale(0.5);
+  }
+
+  .tags {
+    font-size: 18px;
+  }
+
+  .tag {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .view-project-button {
+    padding: 16px 32px;
+    font-size: 20px; 
+  }
+}
+
+
+a {
+  cursor: none; /* Hides the default cursor over links */
+}
+
+.cursor {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.outer {
+  transition: transform 250ms ease-in-out; /* Smooth scaling transition */
+  height: 15px;
+  width: 15px;
+  background: #011ECB;
+}
+
+.inner {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #011ECB;
+  opacity: 70%;
+  transition: background 250ms ease-out, transform 250ms ease-in-out;
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(2); 
+  transition: transform 250ms ease-in-out;
+}
+
+.inner.hover {
+  background: #011ECB;
+}
+
+
+
+
+
+
+
+
+
